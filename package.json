@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "setup": "npm install",
+    "generateApp": "npx nx g @nx/express:app my-express-api --directory=apps/my-express-api --verbose",
+    "start": "npm run setup && npm run generateApp"
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {

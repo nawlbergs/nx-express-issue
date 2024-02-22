@@ -1,0 +1,26 @@
+{
+  "name": "spro-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/spro-e2e/src",
+  "targets": {
+    "e2e": {
+      "executor": "@nx/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/spro-e2e/cypress.config.ts",
+        "testingType": "e2e",
+        "devServerTarget": "spro:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "spro:serve:production"
+        },
+        "ci": {
+          "devServerTarget": "spro:serve-static"
+        }
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["spro"]
+}

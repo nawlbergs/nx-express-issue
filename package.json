@@ -10,6 +10,7 @@
     "nx": "^18.0.4"
   },
   "devDependencies": {
+    "@angular-devkit/core": "~17.1.0",
     "@nx/angular": "^18.0.4",
     "nx": "18.0.4"
   },
